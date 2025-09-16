@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Play a futuristic Snake Game with animations and neon themes." />
+    <title>Snake Game</title>
+    
+    <!-- Google Fonts for futuristic style -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS file -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Particle background container (optional enhancement) -->
+    <div id="particles-js"></div>
+    
+    <main class="game-container" role="main">
+        <header class="game-header">
+            <h1>Snake Game</h1>
+            <div class="score-container" aria-live="polite">
+                <span>Score: </span>
+                <span id="score">0</span>
+            </div>
+        </header>
+        
+        <section class="game-board-wrapper">
+            <canvas id="game-board" width="400" height="400" aria-label="Snake game board"></canvas>
+        </section>
+        
+        <div class="game-controls">
+            <button id="start-btn" aria-label="Start the game">Start</button>
+            <button id="restart-btn" aria-label="Restart the game">Restart</button>
+        </div>
+        
+        <section class="game-instructions">
+            <h2>How to Play</h2>
+            <p>Use the arrow keys to control the snake's movement.</p>
+            <p>Eat the food to grow longer and score points.</p>
+            <p>Avoid running into walls or yourself!</p>
+        </section>
+    </main>
+    
+    <!-- JavaScript file -->
+    <script src="game.js"></script>
+    <!-- Optional particle effect script -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/particles.js"></script> -->
+</body>
+</html>

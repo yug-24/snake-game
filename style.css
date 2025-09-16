@@ -1,0 +1,151 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body with animated gradient background */
+body {
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(270deg, #0f0f0f, #1a1a1a, #0f0f0f);
+    background-size: 600% 600%;
+    animation: backgroundShift 20s ease infinite;
+    color: #fff;
+}
+
+/* Background animation */
+@keyframes backgroundShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Game container with glow */
+.game-container {
+    background: rgba(20, 20, 20, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+    padding: 25px;
+    max-width: 500px;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 255, 204, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.game-container:hover {
+    transform: scale(1.02);
+}
+
+/* Header */
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.game-header h1 {
+    font-size: 28px;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+}
+
+.score-container {
+    font-size: 20px;
+    font-weight: bold;
+    color: #00ffcc;
+}
+
+/* Game board with neon grid */
+#game-board {
+    background-color: #111;
+    border: 2px solid #00ffcc;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 0 0 10px #00ffcc inset;
+}
+
+/* Buttons with gradient and animation */
+.game-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#start-btn {
+    background: linear-gradient(45deg, #00ffcc, #0066ff);
+    color: white;
+    box-shadow: 0 0 10px #00ffcc;
+}
+
+#restart-btn {
+    background: linear-gradient(45deg, #ff0044, #990011);
+    color: white;
+    box-shadow: 0 0 10px #ff0044;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0,255,204,0.7);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Instructions */
+.game-instructions {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.game-instructions h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #00ffcc;
+}
+
+.game-instructions p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+/* Media query for mobile */
+@media (max-width: 500px) {
+    .game-container {
+        padding: 15px;
+    }
+    
+    .game-header h1 {
+        font-size: 22px;
+    }
+    
+    .score-container {
+        font-size: 16px;
+    }
+    
+    #game-board {
+        width: 100%;
+        height: auto;
+    }
+}
